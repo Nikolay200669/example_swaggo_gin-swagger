@@ -1,0 +1,32 @@
+openapi: 3.0.1
+info:
+  title: ""
+  description: ""
+  contact: {}
+  version: ""
+servers:
+- url: /
+paths:
+  /ping:
+    get:
+      tags:
+      - example
+      summary: ping example
+      description: do ping
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/main.Resp'
+components:
+  schemas:
+    main.Resp:
+      type: object
+      properties:
+        name:
+          type: string
+      example:
+        name: name
+x-original-swagger-version: "2.0"
